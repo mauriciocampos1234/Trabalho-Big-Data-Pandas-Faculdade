@@ -9,10 +9,10 @@ import pandas as pd
 
 df = pd.read_csv('data.csv', sep=';', engine='python', encoding='utf-8')
 
-# 1. Criar uma nova variável para o subconjunto
-# Selecionando 3 colunas: 'Pulse', 'Maxpulse' e 'Calories'
-df_reduzido = df[['Pulse', 'Maxpulse', 'Calories']]
+# 1. Imprimir as primeiras 10 linhas
+print("\n--- Primeiras 10 linhas ---")
+print(df.head(10))
 
-# 2. Exibir o novo subconjunto
-print("\n--- Subconjunto de Dados (3 Colunas) ---")
-print(df_reduzido)
+# 2. Imprimir as últimas 10 linhas
+print("\n--- Últimas 10 linhas ---")
+print(df.tail(10))
