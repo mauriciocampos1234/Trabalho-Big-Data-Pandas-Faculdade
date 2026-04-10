@@ -9,10 +9,6 @@ import pandas as pd
 
 df = pd.read_csv('data.csv', sep=';', engine='python', encoding='utf-8')
 
-# 1. Definir o valor máximo de linhas para exibição como 9999
-pd.options.display.max_rows = 9999
-
-# 2. Imprimir o conjunto original usando o método to_string()
-# O to_string() transforma o DataFrame em uma string completa, sem resumos.
-print("\n--- Visualização Completa (Microatividade 3) ---")
-print(df.to_string())
+# 1. Imprimir informações gerais do DataFrame
+print("\n--- Informações Gerais (Microatividade 5) ---")
+df.info()
