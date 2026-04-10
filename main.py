@@ -9,10 +9,10 @@ import pandas as pd
 
 df = pd.read_csv('data.csv', sep=';', engine='python', encoding='utf-8')
 
-# 1. Imprimir as primeiras 10 linhas
-print("\n--- Primeiras 10 linhas ---")
-print(df.head(10))
+# 1. Definir o valor máximo de linhas para exibição como 9999
+pd.options.display.max_rows = 9999
 
-# 2. Imprimir as últimas 10 linhas
-print("\n--- Últimas 10 linhas ---")
-print(df.tail(10))
+# 2. Imprimir o conjunto original usando o método to_string()
+# O to_string() transforma o DataFrame em uma string completa, sem resumos.
+print("\n--- Visualização Completa (Microatividade 3) ---")
+print(df.to_string())
